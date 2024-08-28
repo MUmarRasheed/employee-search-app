@@ -1,0 +1,37 @@
+/* src/styles/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Increased padding for a more spacious look */
+    background-color: #004085; /* Darker shade of blue for a more professional look */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .logo {
+    font-size: 1.5rem; /* Larger font size for the logo */
+    font-weight: bold; /* Bold text for emphasis */
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-link {
+    margin: 0 15px; /* Increased margin for better spacing */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* Consistent font size */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .nav-link:hover {
+    color: #f8f9fa; /* Slightly lighter color on hover */
+    border-bottom: 2px solid #f8f9fa; /* Underline effect on hover */
+  }
+  
+  .nav-link:active {
+    color: #e9ecef; /* Color change on click */
+  }
+  
