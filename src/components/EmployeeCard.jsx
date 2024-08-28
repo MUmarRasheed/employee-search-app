@@ -1,11 +1,21 @@
-// src/components/EmployeeCard.jsx
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { EmployeeContext } from '../contexts/EmployeeContext';
 import '../styles/EmployeeCard.css';
 
 const EmployeeCard = ({ employee }) => {
   const { addFavorite } = useContext(EmployeeContext);
+  const [message, setMessage] = useState('');
+
+  const handleAddFavorite = () => {
+    addFavorite(employee);
+    setMessage('Added to favorites successfully!');
+    
+    // Clear the message after a few seconds
+    setTimeout(() => {
+      setMessage('');
+    }, 1000); // Message disappears after 3 seconds
+  }
 
   return (
     <div className="employee-card">
@@ -14,7 +24,8 @@ const EmployeeCard = ({ employee }) => {
       <p>Age: {employee.dob.age}</p>
       <p>Location: {employee.location.city}, {employee.location.state}</p>
       <Link to={`/employee/${employee.login.uuid}`}>More Details</Link>
-      <button onClick={() => addFavorite(employee)}>Save Favorite</button>
+      <button onClick={handleAddFavorite}>Save Favorite</button>
+      {message && <p className="success-message">{message}</p>}
     </div>
   );
 };
