@@ -29,6 +29,7 @@
     background-color: #28a745;
     color: white;
     cursor: pointer;
+    margin: 5px; /* Add margin to separate buttons */
   }
   
   .employee-card button:hover {

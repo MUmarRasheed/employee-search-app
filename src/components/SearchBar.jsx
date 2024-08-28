@@ -3,8 +3,8 @@ import { EmployeeContext } from '../contexts/EmployeeContext';
 import '../styles/SearchBar.css';
 
 const DEFAULT_SEED = 'google'; // Default seed value
-const RESULTS_PER_PAGE = 21;
-const INITIAL_RESULTS = 21;
+const RESULTS_PER_PAGE = 10;
+const INITIAL_RESULTS = 10;
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
